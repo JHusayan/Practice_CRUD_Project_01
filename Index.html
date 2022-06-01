@@ -2,7 +2,7 @@
     <head>
         <meta charset = "UTF-8">
         <title>Practice CRUD Application</title>
-        <link rel="style" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     </head>
     <body>
@@ -12,10 +12,27 @@
         </div>
         <div class="form">
             <form action="javascript:void(0);" method="POST" onsubmit="app.Add()">
-                <input type="text" id="add-todo" placeholder="Registry Input">
+                <input type="text" id="add-reg" placeholder="Registry Input">
                 <input type="submit" value="Add" class="btn btn-primary">
-                <p></p>
+
+            </form>
+            <p>Number of Registries:</p>
+            <p id="counter"></p>
+            <table>
+                <tr class="Registry">
+                    <th><h3>Registry Member</h3></th>
+                </tr>
+                <tbody id="tasks">
+                </tbody>
+            </table>
+        </div>
+        <div id="edit-box" role="aria-hidden">
+            <form action="javascript:void(0);" method="POST" id="save-edit">
+                <input type="text" id="edit-reg">
+                <input type="submit" value="Save" class="btn btn-success">
+                <a onclick="CloseInput()" aria-label="Close">&#10006;</a>
             </form>
         </div>
+        <script src="script.js"></script>
     </body>
 </html>
